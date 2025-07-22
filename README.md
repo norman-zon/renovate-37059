@@ -1,17 +1,27 @@
-# minimal-reproduction-template
-
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+# Discussion #37059
 
 ## Current behavior
 
-Explain the current behavior here.
+```json
+
+    {
+      "description": "Disable all managers",
+      "matchManagers": ["*"],
+      "enabled": false
+    }
+
+```
+
+does not disable all managers.
 
 ## Expected behavior
 
-Explain the expected behavior here.
+The configuration should disable all package managers when the `matchManagers` is set to `["*"]` and `enabled` is set to `false`.
+
+I should be able to enable managers selectively after this configuration.
+
+So in this example the `Dockerfile` manager should be enabled, but all others should be disabled. This works for `pre-commit`, but the `tflint` manager is still enabled.
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+[Disussion #37059](https://github.com/renovatebot/renovate/discussions/37059)
