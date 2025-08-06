@@ -1,15 +1,12 @@
 {
   "dependencyDashboard": true,
-  "packageRules": [
+   "packageRules": [
     {
-      "description": "Disable all managers",
+      "description": "Disable all managers except Dockerfile",
       "matchManagers": [
-        "*"
+        "!dockerfile"
       ],
       "enabled": false
     }
-  ],
-  "dockerfile": {
-    "enabled": true
-  }
+]
 }
